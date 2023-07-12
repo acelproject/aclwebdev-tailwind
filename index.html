@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&family=Viga&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              myBgColor: "#f8f9fa",
+              myColor: "#212529",
+              myBlack: "#343a40",
+              main: "#0ef6cc",
+            },
+            fontFamily: {
+              inter: ["Inter"],
+              viga: ["Viga"],
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      #toggle:checked ~ label div.toggle-circle{
+        @apply translate-x-3;
+      }
+    </style>
+  </head>
+  <body class="bg-myBgColor dark:bg-myBlack dark:text-myBgColor">
+    <!-- Darkmode -->
+    <div class="fixed p-4 rounded-bl-xl right-0 top-0 bg-myBgColor shadow-md cursor-pointer flex items-center dark:text-myBgColor dark:bg-myBlack dark:shadow-slate-800">
+      <span class="light">Light</span>
+      <input type="checkbox" id="toggle" class="hidden">
+      <label for="toggle">
+        <div class="w-9 h-5 bg-slate-300 rounded-full mx-1 flex items-center p-1 cursor-pointer">
+          <div class="w-4 h-4 bg-myBlack rounded-full toggle-circle"></div>
+        </div>
+      </label>
+      <span class="light">Dark</span>
+    </div>
+    <!-- End Darkmode -->
+    <section class="max-w-3xl mx-auto mt-[70px] mb-[70px]">
+      <h1 class="text-5xl font-bold mx-8 mt-8 mb-4 font-inter">
+        Belajar Pemograman Bersama Acel Web Dev
+      </h1>
+      <div class="author mx-8 italic text-gray-500">
+        By <a href="#" class="text-gray-800 font-semibold">Marchel Lumimpah</a>,
+        22 Januari 2023
+      </div>
+      <p class="mx-8 font-inter my-4">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt
+        accusantium sed sit natus minus nulla eius harum! Numquam quia similique
+        voluptatum in fugiat, voluptatem possimus pariatur, minima nemo, est
+        ratione.
+      </p>
+      <button
+        class="bg-slate-400 hover:bg-slate-500 active:bg-slate-700 text-white font-semibold px-4 my-2 mx-8 transition py-2 rounded-md"
+      >
+        clik here
+      </button>
+    </section>
+
+    <section class="tools-wrapper max-w-3xl mx-auto my-8 flex flex-col">
+        <h1 class="text-4xl font-bold mb-6 mx-8 bg-gradient-to-r dark:bg-gradient-to-r dark:from-myBgColor to-main from-myBlack to-main bg-clip-text text-transparent">Belajar Front-end</h1>
+      <div
+        class="max-w-6xl mx-8 my-4 px-4 py-6 rounded-md bg-myBlack text-myBgColor bg-gradient-to-tr from-myBlack via-myBlack to-orange-600 group hover:bg-orange-600 dark:bg-white dark:bg-gradient-to-tr dark:from-myBgColor dark:via-myBgColor dark:to-orange-600 dark:text-myBlack"
+      >
+        <h2 class="text-2xl mb-2 text-orange-400">Apa itu HTML</h2>
+        <p class="text-sm mb-6 group-hover:text-orange-400 selection:text-orange-400">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem error ipsa, tempora delectus tempore ipsum placeat
+          voluptatibus. Commodi, quo accusamus!
+        </p>
+        <a href="#" class="bg-orange-500 rounded-full px-5 py-1.5 text-white hover:bg-orange-600">Learn</a>
+      </div>
+      <div
+        class="card max-w-6xl mx-8 my-4 px-4 py-6 rounded-md bg-myBlack text-myBgColor bg-gradient-to-tr from-myBlack via-myBlack to-blue-600"
+      >
+        <h2 class="text-2xl mb-2 text-blue-400">Apa itu CSS</h2>
+        <p class="text-sm">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem error ipsa, tempora delectus tempore ipsum placeat
+          voluptatibus. Commodi, quo accusamus!
+        </p>
+      </div>
+      <div
+        class="card max-w-6xl mx-8 my-4 px-4 py-6 rounded-md bg-myBlack text-myBgColor bg-gradient-to-tr from-myBlack via-myBlack to-yellow-600"
+      >
+        <h2 class="text-2xl mb-2 text-yellow-400">Apa itu JAVASCRIPT</h2>
+        <p class="text-sm">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem error ipsa, tempora delectus tempore ipsum placeat
+          voluptatibus. Commodi, quo accusamus!
+        </p>
+      </div>
+    </section>
+
+    <section class="my-40 mx-8">
+        <h1 class="text-4xl font-bold mb-6 text-center">Background Image</h1>
+        <div class="max-w-xl h-96 bg-slate-600 mx-auto overflow-y-scroll bg-fixed" style="background-image: url('https://source.unsplash.com/1000x600?animals');background-size: cover;">
+        <p class="p-5 text-2xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, cupiditate esse! Distinctio incidunt voluptatibus itaque, cupiditate, veritatis doloribus, sunt non unde modi ipsam consequuntur in ratione velit aliquid vitae eligendi impedit neque at et ab? Corrupti ex minus expedita, consectetur repudiandae assumenda temporibus voluptatum nesciunt porro reprehenderit consequuntur facilis qui rerum doloremque, voluptates architecto omnis repellat animi. Impedit dolores nisi dolorem eaque similique voluptate cum eos unde expedita quidem quam deserunt ad enim a debitis assumenda, illo explicabo? Veritatis exercitationem, ipsam dolorum, eaque quae culpa debitis et provident consectetur optio, laudantium blanditiis ab dolorem alias odio accusamus voluptatum corporis ullam obcaecati! Nam voluptatum id sequi veniam? Odit id iste aliquid iure repudiandae culpa aspernatur saepe reprehenderit magnam, dolores neque impedit eaque quia quidem deleniti consectetur velit accusamus accusantium unde minima, asperiores sequi eveniet? Soluta delectus quisquam, nisi dicta quas earum quidem alias veritatis itaque explicabo nostrum vero ut, quasi vel tempore maiores eum pariatur animi dignissimos cum aliquam accusamus sequi nemo. Et ipsum dolores laborum sequi nam pariatur dicta accusantium eligendi! Placeat explicabo aliquid eius iure harum, similique animi laboriosam necessitatibus quae voluptate error dolorum, suscipit vitae atque alias, minus ipsa maiores natus molestiae. Magnam, officia quod! Illum, quod ex!</p></div>
+    </section>
+
+    <section class="my-40 mx-8">
+      <h1 class="text-4xl font-bold text-center">Background Image 2</h1>
+      <div class="max-w-xl mt-8 h-96 mx-auto bg-main bg-contain bg-no-repeat bg-center rounded-2xl shadow-md shadow-slate-500 overflow-hidden flex" style="background-image: url(./img/1.jpg);">
+        <!-- <div class="w-full h-full bg-blue-300 mix-blend-darken"></div> -->
+        <div class="w-[200px] h-[200px] bg-myBlack/30 m-auto backdrop-blur-sm"></div>
+      </div>
+    </section>
+
+    <section class="my-40 mx-8">
+      <h1 class="text-4xl font-bold text-center mb-12">Input element dengan Tailwind</h1>
+      <div class="max-w-xl mx-auto shadow-md dark:shadow-slate-800 rounded-sm p-12 flex flex-col">
+        <label for="email" class="font-semibold after:content-['*'] after:text-red-500 after:ml-1">Username</label>
+        <input type="email" id="email" placeholder="masukan username" class="shadow-md border rounded mt-3 shadow-slate-200 dark:shadow-slate-500 focus:outline-none px-3 py-2 focus:ring-1 invalid:text-red-500 invalid:focus:ring-red-500 peer">
+        <p class="text-sm m-1 text-red-500 invisible peer-invalid:visible">Email tidak valid.</p>
+      </div>
+    </section>
+
+
+    <!-- My script -->
+    <script src="app.js"></script>
+  </body>
+</html>
